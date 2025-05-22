@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import ProductCard from "@/components/product-card"
-import TestimonialCard from "@/components/testimonial-card"
-import { motion } from "framer-motion"
-import { ArrowRight, Phone, Mail, MapPin, Sparkles } from "lucide-react"
-import Link from "next/link"
-import { getProductsByCategory } from "@/lib/products"
-import DecorativePattern from "@/components/decorative-pattern"
-import DecorativeDivider from "@/components/decorative-divider"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import ProductCard from "@/components/product-card";
+import TestimonialCard from "@/components/testimonial-card";
+import { motion } from "framer-motion";
+import { ArrowRight, Phone, Mail, MapPin, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { getProductsByCategory } from "@/lib/products";
+import DecorativePattern from "@/components/decorative-pattern";
+import DecorativeDivider from "@/components/decorative-divider";
 
 export default function Home() {
-  const agarbathiProducts = getProductsByCategory("agarbathi")
-  const camphorProducts = getProductsByCategory("camphor")
+  const agarbathiProducts = getProductsByCategory("agarbathi");
+  const camphorProducts = getProductsByCategory("camphor");
 
   return (
     <main className="flex min-h-screen flex-col">
@@ -29,7 +29,11 @@ export default function Home() {
           />
         </div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
               Arathy Camphor & Arathy Agarbathy
             </h1>
@@ -71,21 +75,29 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-amber-800 mb-6">Welcome to Jyothys Enterprises</h2>
+              <h2 className="text-3xl font-bold text-amber-800 mb-6">
+                Welcome to Jyothys Enterprises
+              </h2>
               <p className="text-lg text-amber-900/80 mb-8">
-                For over two decades, we have been crafting the finest quality agarbathies and camphor products,
-                bringing divine fragrances to homes and temples across the country. Our products are made with
-                traditional methods and the purest ingredients to enhance your spiritual experience.
+                For over two decades, we have been crafting the finest quality
+                agarbathies and camphor products, bringing divine fragrances to
+                homes and temples across the country. Our products are made with
+                traditional methods and the purest ingredients to enhance your
+                spiritual experience.
               </p>
-              <div className="flex justify-center">
-                <Image
-                  src="/images/ritual-fire.jpeg"
-                  alt="Traditional ritual with fire"
+                <div className="flex justify-center">
+                <video
+                  src="/images/vid1.mp4"
                   width={600}
                   height={400}
                   className="rounded-lg shadow-lg"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster="/images/incense-background.jpeg"
                 />
-              </div>
+                </div>
             </motion.div>
           </div>
         </div>
@@ -100,7 +112,9 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-center text-amber-800 mb-4">Our Premium Agarbathies</h2>
+            <h2 className="text-3xl font-bold text-center text-amber-800 mb-4">
+              Our Premium Agarbathies
+            </h2>
             <div className="w-24 h-1 bg-amber-500 mx-auto mb-12"></div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {agarbathiProducts.map((product, index) => (
@@ -128,7 +142,9 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-center text-amber-800 mb-4">Pure Camphor Products</h2>
+            <h2 className="text-3xl font-bold text-center text-amber-800 mb-4">
+              Pure Camphor Products
+            </h2>
             <div className="w-24 h-1 bg-amber-500 mx-auto mb-12"></div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {camphorProducts.map((product, index) => (
@@ -158,10 +174,14 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-amber-800 mb-6">Enhancing Your Devotional Experience</h2>
+              <h2 className="text-3xl font-bold text-amber-800 mb-6">
+                Enhancing Your Devotional Experience
+              </h2>
               <p className="text-lg text-amber-900/80 mb-6">
-                Our products are crafted to enhance your spiritual rituals and create a serene atmosphere for prayer and
-                meditation. The fragrances are carefully selected to invoke a sense of peace and devotion.
+                Our products are crafted to enhance your spiritual rituals and
+                create a serene atmosphere for prayer and meditation. The
+                fragrances are carefully selected to invoke a sense of peace and
+                devotion.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start">
@@ -170,11 +190,16 @@ export default function Home() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-amber-600 mr-2">•</span>
-                  <span>Long-lasting fragrances that fill your space with divine aroma</span>
+                  <span>
+                    Long-lasting fragrances that fill your space with divine
+                    aroma
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-amber-600 mr-2">•</span>
-                  <span>Made with natural ingredients following traditional methods</span>
+                  <span>
+                    Made with natural ingredients following traditional methods
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-amber-600 mr-2">•</span>
@@ -198,7 +223,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <Image
-                src="/images/ritual-ceremony.jpeg"
+                src="/images/img3.png"
                 alt="Traditional ritual ceremony"
                 width={600}
                 height={400}
@@ -219,7 +244,9 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-center text-amber-800 mb-4">What Our Customers Say</h2>
+            <h2 className="text-3xl font-bold text-center text-amber-800 mb-4">
+              What Our Customers Say
+            </h2>
             <DecorativeDivider />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
@@ -274,7 +301,9 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-center mb-4">Contact Us</h2>
+              <h2 className="text-3xl font-bold text-center mb-4">
+                Contact Us
+              </h2>
               <DecorativeDivider className="mb-12" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
@@ -284,7 +313,7 @@ export default function Home() {
                       <Phone className="h-5 w-5 mr-3 mt-1" />
                       <div>
                         <p className="font-medium">Phone</p>
-                        <p>+91 98765 43210</p>
+                        <p>+91 7907417217</p>
                       </div>
                     </div>
                     <div className="flex items-start">
@@ -298,8 +327,10 @@ export default function Home() {
                       <MapPin className="h-5 w-5 mr-3 mt-1" />
                       <div>
                         <p className="font-medium">Address</p>
-                        <p>123 Temple Street, Devotional District</p>
-                        <p>Kerala, India - 682001</p>
+                        <p>Kannamangalath illam kumbalam p.o</p>
+                        <p>Near Kumbalam Bridge</p>
+                        <p>Ernakulam District</p>
+                        <p>Kerala, India - 682506</p>
                       </div>
                     </div>
                   </div>
@@ -321,10 +352,12 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="mt-8">
-                    <h3 className="text-xl font-semibold mb-4">Wholesale Inquiries</h3>
+                    <h3 className="text-xl font-semibold mb-4">
+                      Wholesale Inquiries
+                    </h3>
                     <p className="mb-4">
-                      Interested in bulk orders for your store or temple? Contact our wholesale department for special
-                      pricing.
+                      Interested in bulk orders for your store or temple?
+                      Contact our wholesale department for special pricing.
                     </p>
                     <Button
                       variant="outline"
@@ -346,15 +379,20 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <h3 className="text-xl font-bold">Arathy Camphor & Arathy Agarbathy</h3>
+              <h3 className="text-xl font-bold">
+                Arathy Camphor & Arathy Agarbathy
+              </h3>
               <p className="text-white/70">A product of Jyothys Enterprises</p>
             </div>
             <div className="text-center md:text-right">
-              <p className="text-white/70">© {new Date().getFullYear()} Jyothys Enterprises. All rights reserved.</p>
+              <p className="text-white/70">
+                © {new Date().getFullYear()} Jyothys Enterprises. All rights
+                reserved.
+              </p>
             </div>
           </div>
         </div>
       </footer>
     </main>
-  )
+  );
 }
